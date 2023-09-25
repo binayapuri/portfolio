@@ -1,0 +1,74 @@
+.aws-dev-assoc-training {
+    display: inline-block;
+    width: 200px; /* Adjust the width and height as needed */
+    height: 200px;
+    background: url('../img/awsassociate.png') no-repeat center center;
+    background-size: cover;
+  }
+  
+  .aws-dev-accr-training {
+    display: inline-block;
+    width: 200px; /* Adjust the width and height as needed */
+    height: 200px;
+    background: url('../img/accrediated.png') no-repeat center center;
+    background-size: cover;
+  }
+  .ion-code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px; /* Adjust the width and height as needed */
+    height: 200px;
+    background-size: cover;
+  }
+  .aws-dev-apex {
+    display: inline-block;
+    width: 200px; /* Adjust the width and height as needed */
+    height: 100px;
+    margin-top: 50px;
+    background: url('../img/apex.png') no-repeat center center;
+    background-size: 115%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .aws-dev-bernhardt {
+    display: inline-block;
+    width: 200px; /* Adjust the width and height as needed */
+    height: 100px;
+    margin-top: 50px;
+    background: url('../img/bernhardt.png') no-repeat center center;
+    background-size: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .aws-dev-shss {
+    display: inline-block;
+    width: 200px; /* Adjust the width and height as needed */
+    height: 100px;
+    margin-top: 50px;
+    background: url('../img/shss.png') no-repeat center center;
+    background-size: 60%;
+    justify-content: center;
+    align-items: center;
+  }
+  .ashok_dai {
+    display: inline-block;
+    width: 200px; /* Adjust the width and height as needed */
+    height: 200px;
+    margin-top: 10px;
+    background: url('../img/ashok_dai.png') no-repeat center center;
+    background-size: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .bishwash_dai {
+    display: inline-block;
+    width: 200px; /* Adjust the width and height as needed */
+    height: 200px;
+    margin-top: 10px;
+    background: url('../img/bishwash_dai.png') no-repeat center center;
+    background-size: 100%;
+    justify-content: center;
+    align-items: center;
+  }
