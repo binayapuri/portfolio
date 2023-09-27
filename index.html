@@ -889,8 +889,12 @@ benchmark for testing and developing machine learning algorithms, particularly f
                     </h5>
                   </div>
                   <div>
-                      <form action="" method="post" role="form" class="contactForm">
-                      <div id="sendmessage">Your message has been sent. Thank you!</div>
+                      <form action="https://formspree.io/f/xnqkoaza" method="post" role="form" class="contactForm" id="myForm">
+                      <div id="sendmessage">Your message has been sent. Thank you!  <br>
+                        shortly i will contact you 
+
+
+                      </div>
                       <div id="errormessage"></div>
                       <div class="row">
                         <div class="col-md-12 mb-3">
@@ -999,5 +1003,22 @@ benchmark for testing and developing machine learning algorithms, particularly f
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
 
+  <script>
+    // JavaScript to handle form submission and display the success message
+    document.getElementById("myForm").addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent the default form submission behavior
+  
+      // You can add form validation here if needed.
+  
+      // Assuming the form is valid, show the success message.
+      var successMessage = document.getElementById("sendmessage");
+      successMessage.style.display = "block";
+  
+      // Hide the success message after 5 seconds (5000 milliseconds)
+      setTimeout(function () {
+        successMessage.style.display = "none";
+      }, 5000); // 5000 milliseconds = 5 seconds
+    });
+  </script>
 </body>
 </html>
