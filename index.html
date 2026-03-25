@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Binaya Puri | Cyber-Architect & Senior DevOps</title>
+  <title>Binaya Puri | AI/ML & Cloud Architect</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  
   <link href="img/favicon.png" rel="icon">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <link href="css/modern-premium.css" rel="stylesheet">
@@ -18,137 +17,75 @@
       --cyber-pink: #FF00FF;
       --cyber-cyan: #00FFFF;
       --cyber-dark: #050505;
+      --cyber-red: #ff3333;
     }
 
-    body {
-      background-color: var(--cyber-dark);
-      color: #fff;
-      overflow-x: hidden;
-      font-family: var(--font-body);
-    }
-
-    h1, h2, h3, .section-label, .log-meta {
-      font-family: 'Syncopate', sans-serif;
-      text-transform: uppercase;
-    }
-
-    .tech-mono {
-      font-family: 'Share Tech Mono', monospace;
-    }
+    body { background-color: var(--cyber-dark); color: #fff; overflow-x: hidden; font-family: var(--font-body); }
+    h1, h2, h3, .section-label, .log-meta { font-family: 'Syncopate', sans-serif; text-transform: uppercase; }
+    .tech-mono { font-family: 'Share Tech Mono', monospace; }
 
     /* Cinematic Boot Overlay */
-    #boot-sequence {
-      position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-      background: #000; z-index: 99999; display: flex; flex-direction: column;
-      justify-content: center; align-items: center;
-    }
-
-    .boot-text {
-      font-family: 'Share Tech Mono', monospace;
-      color: var(--cyber-gold); font-size: 0.8rem;
-      text-align: left; width: 80%; max-width: 600px;
-      height: 200px; overflow: hidden; margin-bottom: 2rem;
-      text-shadow: 0 0 5px var(--cyber-gold);
-    }
-
-    .btn-cyber {
-      background: rgba(212, 175, 55, 0.1); border: 1px solid var(--cyber-gold);
-      color: var(--cyber-gold); padding: 1.5rem 4rem;
-      font-family: 'Syncopate', sans-serif; letter-spacing: 0.5em;
-      cursor: pointer; text-transform: uppercase;
-      box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
-      transition: all 0.3s ease; position: relative; overflow: hidden;
-    }
-    .btn-cyber:hover {
-      background: var(--cyber-gold); color: #000;
-      box-shadow: 0 0 30px var(--cyber-gold);
-      transform: scale(1.05);
-    }
+    #boot-sequence { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: #000; z-index: 99999; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+    .boot-text { font-family: 'Share Tech Mono', monospace; color: var(--cyber-gold); font-size: 0.8rem; text-align: left; width: 80%; max-width: 600px; height: 200px; overflow: hidden; margin-bottom: 2rem; text-shadow: 0 0 5px var(--cyber-gold); }
+    .btn-cyber { background: rgba(212, 175, 55, 0.1); border: 1px solid var(--cyber-gold); color: var(--cyber-gold); padding: 1.5rem 4rem; font-family: 'Syncopate', sans-serif; letter-spacing: 0.5em; cursor: pointer; text-transform: uppercase; box-shadow: 0 0 15px rgba(212, 175, 55, 0.2); transition: all 0.3s ease; position: relative; overflow: hidden; }
+    .btn-cyber:hover { background: var(--cyber-gold); color: #000; box-shadow: 0 0 30px var(--cyber-gold); transform: scale(1.05); }
 
     /* Glitch Effect */
-    .glitch-text {
-      position: relative; color: white;
-    }
-    .glitch-text::before, .glitch-text::after {
-      content: attr(data-text); position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-      background: var(--cyber-dark);
-    }
-    .glitch-text::before {
-      left: 2px; text-shadow: -2px 0 var(--cyber-pink);
-      animation: glitch-anim-1 2s infinite linear alternate-reverse;
-    }
-    .glitch-text::after {
-      left: -2px; text-shadow: -2px 0 var(--cyber-cyan);
-      animation: glitch-anim-2 3s infinite linear alternate-reverse;
-    }
+    .glitch-text { position: relative; color: white; display: inline-block; }
+    .glitch-text::before, .glitch-text::after { content: attr(data-text); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: var(--cyber-dark); }
+    .glitch-text::before { left: 2px; text-shadow: -2px 0 var(--cyber-pink); animation: glitch-anim-1 2s infinite linear alternate-reverse; }
+    .glitch-text::after { left: -2px; text-shadow: -2px 0 var(--cyber-cyan); animation: glitch-anim-2 3s infinite linear alternate-reverse; }
 
     @keyframes glitch-anim-1 {
-      0% { clip: rect(20px, 9999px, 15px, 0); }
-      20% { clip: rect(80px, 9999px, 60px, 0); }
-      40% { clip: rect(10px, 9999px, 50px, 0); }
-      60% { clip: rect(30px, 9999px, 80px, 0); }
-      80% { clip: rect(70px, 9999px, 20px, 0); }
-      100% { clip: rect(40px, 9999px, 90px, 0); }
+      0% { clip: rect(20px, 9999px, 15px, 0); } 20% { clip: rect(80px, 9999px, 60px, 0); }
+      40% { clip: rect(10px, 9999px, 50px, 0); } 60% { clip: rect(30px, 9999px, 80px, 0); }
+      80% { clip: rect(70px, 9999px, 20px, 0); } 100% { clip: rect(40px, 9999px, 90px, 0); }
     }
     @keyframes glitch-anim-2 {
-      0% { clip: rect(60px, 9999px, 10px, 0); }
-      20% { clip: rect(10px, 9999px, 30px, 0); }
-      40% { clip: rect(80px, 9999px, 60px, 0); }
-      60% { clip: rect(20px, 9999px, 90px, 0); }
-      80% { clip: rect(50px, 9999px, 40px, 0); }
-      100% { clip: rect(90px, 9999px, 20px, 0); }
+      0% { clip: rect(60px, 9999px, 10px, 0); } 20% { clip: rect(10px, 9999px, 30px, 0); }
+      40% { clip: rect(80px, 9999px, 60px, 0); } 60% { clip: rect(20px, 9999px, 90px, 0); }
+      80% { clip: rect(50px, 9999px, 40px, 0); } 100% { clip: rect(90px, 9999px, 20px, 0); }
     }
 
+    /* Typewriter Rotating Title */
+    .typewriter-title::after { content: '|'; animation: blinkType 1s infinite; color: var(--cyber-gold); }
+    @keyframes blinkType { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
     /* Data Cards */
-    .cyber-card {
-      background: rgba(10, 10, 10, 0.7);
-      border: 1px solid rgba(212, 175, 55, 0.3);
-      padding: 3rem; position: relative;
-      backdrop-filter: blur(10px);
-      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-      overflow: hidden;
-    }
-    .cyber-card::before {
-      content: ''; position: absolute; top: 0; left: 0;
-      width: 4px; height: 100%; background: var(--cyber-gold);
-      transform: scaleY(0); transform-origin: top;
-      transition: transform 0.4s ease;
-    }
+    .cyber-card { background: rgba(10, 10, 10, 0.7); border: 1px solid rgba(212, 175, 55, 0.3); padding: 3rem; position: relative; backdrop-filter: blur(10px); transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); overflow: hidden; }
+    .cyber-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--cyber-gold); transform: scaleY(0); transform-origin: top; transition: transform 0.4s ease; }
     .cyber-card:hover { transform: translateY(-10px); border-color: var(--cyber-gold); }
     .cyber-card:hover::before { transform: scaleY(1); }
 
-    .glow-header {
-      font-size: clamp(3rem, 8vw, 6rem);
-      background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.2) 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      line-height: 1.1; margin-bottom: 2rem;
-    }
-
-    .matrix-bg {
-      position: fixed; top:0; left:0; width:100%; height:100%;
-      pointer-events: none; z-index: -1;
-    }
+    .glow-header { font-size: clamp(3rem, 8vw, 6rem); background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.2) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.1; margin-bottom: 2rem; }
+    .matrix-bg { position: fixed; top:0; left:0; width:100%; height:100%; pointer-events: none; z-index: -1; }
 
     /* HUD Lines */
-    .hud-line { position: fixed; background: rgba(212, 175, 55, 0.2); z-index: 50; pointer-events: none; }
+    .hud-line { position: fixed; background: rgba(212, 175, 55, 0.1); z-index: 50; pointer-events: none; }
     .hud-line-h { width: 100vw; height: 1px; top: 50%; left: 0; }
     .hud-line-v { width: 1px; height: 100vh; top: 0; left: 50%; }
 
+    /* Scanline */
+    .scanline { width: 100%; height: 100px; z-index: 9999; background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.02) 50%, rgba(0, 0, 0, 0) 100%); opacity: 0.1; position: fixed; bottom: 100%; pointer-events: none; animation: scanline 8s linear infinite; }
+    @keyframes scanline { 0% { bottom: 100%; } 100% { bottom: -100px; } }
+
     .log-entry { margin-bottom: 4rem; padding-left: 2rem; border-left: 2px solid var(--cyber-gold); position: relative;}
-    .log-entry::before {
-      content: ''; position: absolute; left: -8px; top: 0; width: 14px; height: 14px;
-      background: var(--cyber-dark); border: 2px solid var(--cyber-gold);
-    }
+    .log-entry::before { content: ''; position: absolute; left: -8px; top: 0; width: 14px; height: 14px; background: var(--cyber-dark); border: 2px solid var(--cyber-gold); }
     .log-entry:hover::before { background: var(--cyber-gold); box-shadow: 0 0 10px var(--cyber-pink); }
 
-    /* Skill Matrix */
     .skill-bar { height: 4px; background: #222; margin-top: 1rem; position: relative; overflow: hidden;}
-    .skill-fill { height: 100%; background: var(--cyber-gold); width: 0; position: absolute; top:0; left:0;box-shadow: 0 0 10px var(--cyber-gold);}
+    .skill-fill { height: 100%; background: var(--cyber-gold); width: 0; position: absolute; top:0; left:0; box-shadow: 0 0 10px var(--cyber-gold);}
+
+    /* Contact Links */
+    .contact-link { display: inline-flex; align-items: center; gap: 1rem; padding: 1rem 2rem; border: 1px solid var(--cyber-cyan); color: var(--cyber-cyan); text-decoration: none; font-family: 'Share Tech Mono'; transition: background 0.3s; margin-right: 1rem; margin-bottom: 1rem; }
+    .contact-link:hover { background: rgba(0, 255, 255, 0.2); box-shadow: 0 0 15px var(--cyber-cyan); }
 
     #youtube-player { position: absolute; top: -9999px; visibility: hidden; }
+    
+    /* Dynamic Rings CSS */
+    .holo-ring { position:fixed; top:50%; left:50%; border-radius:50%; transform:translate(-50%, -50%); border: 1px solid rgba(0, 255, 255, 0.1); pointer-events: none; z-index:-1;}
   </style>
 </head>
-
 <body id="page-top">
 
   <!-- CINEMATIC BOOT SEQUENCE -->
@@ -159,6 +96,12 @@
 
   <div class="hud-line hud-line-h"></div>
   <div class="hud-line hud-line-v"></div>
+  <div class="scanline"></div>
+
+  <!-- Holographic Background Rings -->
+  <div class="holo-ring" style="width: 80vw; height: 80vw; animation: spin-slow 60s linear infinite reverse;"></div>
+  <div class="holo-ring" style="width: 60vw; height: 60vw; border-color: rgba(212, 175, 55, 0.1); animation: spin-slow 40s linear infinite;"></div>
+  @keyframes spin-slow { 100% { transform: translate(-50%, -50%) rotate(360deg); } }
 
   <div id="youtube-player"></div>
   <div id="canvas-container" class="matrix-bg"></div>
@@ -172,7 +115,8 @@
         <li><a href="#projects">01_ASSETS</a></li>
         <li><a href="#experience">02_TIMELINE</a></li>
         <li><a href="#skills">03_STACK</a></li>
-        <li><a href="#education">04_ACADEMIA</a></li>
+        <li><a href="#certifications">04_CERTS</a></li>
+        <li><a href="#contact">05_COMM</a></li>
       </ul>
     </div>
   </nav>
@@ -180,18 +124,17 @@
   <!-- HERO SECTION -->
   <section id="home" class="hero" style="min-height: 100vh; display: flex; align-items: center; position: relative;">
     <div style="max-width: 1200px; margin: 0 auto; width: 100%; padding: 0 2rem; z-index: 10;" class="gsap-hero">
-      <p class="tech-mono" style="color: var(--cyber-gold); letter-spacing: 0.5em; text-shadow: 0 0 5px var(--cyber-gold); margin-bottom: 1rem;">>> AUTHENTICATED: LEVEL 5 CLEARANCE</p>
-      <h1 class="glow-header glitch-text" data-text="DevOps & Cloud">DevOps & Cloud</h1>
-      <h1 class="glow-header" style="color: transparent; -webkit-text-stroke: 1px var(--cyber-gold); margin-top: -2rem;">Architect.</h1>
+      <p class="tech-mono" style="color: var(--cyber-gold); letter-spacing: 0.5em; text-shadow: 0 0 5px var(--cyber-gold); margin-bottom: 1rem;">>> SYSTEM_OVERRIDE: ENGAGED</p>
+      <h1 class="glow-header typewriter-title" id="typewriter" style="color: #fff;"></h1>
+      <h1 class="glow-header glitch-text" data-text="Architect." style="color: transparent; -webkit-text-stroke: 1px var(--cyber-gold); margin-top: -2rem;">Architect.</h1>
       
-      <div style="background: rgba(212,175,55,0.05); border-left: 4px solid var(--cyber-gold); padding: 2rem; margin-top: 3rem; max-width: 800px; backdrop-filter: blur(5px);">
-        <p class="tech-mono" style="font-size: 1.1rem; line-height: 1.8; color: #bbb;">
+      <div style="background: rgba(212,175,55,0.05); border-left: 4px solid var(--cyber-cyan); padding: 2rem; margin-top: 3rem; max-width: 800px; backdrop-filter: blur(5px);">
+        <p class="tech-mono" style="font-size: 1.1rem; line-height: 1.8; color: #ddd;">
           Master of Infrastructure. Architecting high-availability, fault-tolerant cloud ecosystems. 
           Specializing in AWS scaling, MLOps automation, zero-downtime CI/CD workflows, and deeply integrated AI-driven network paradigms.
           Transforming monolithic chaos into crystalline, automated order.
         </p>
       </div>
-
       <div style="display: flex; gap: 2rem; margin-top: 4rem;">
         <a href="#projects" class="btn-cyber" style="padding: 1.2rem 3rem; font-size: 0.9rem;">ACCESS_DATA</a>
       </div>
@@ -203,47 +146,24 @@
     <div class="container-full">
       <p class="tech-mono" style="color: var(--cyber-pink); letter-spacing: 0.3em; margin-bottom: 1rem;">// DATA_SEGMENT_01</p>
       <h2 style="font-size: 3rem; margin-bottom: 5rem; letter-spacing: 0.1em;">Tactical <span style="color: var(--cyber-gold);">Executions</span></h2>
-      
       <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 3rem;">
-        <!-- Project 1 -->
         <div class="cyber-card gsap-card">
           <div class="tech-mono" style="color: var(--cyber-gold); font-size: 0.8rem; margin-bottom: 1rem;">[ CLASSIFICATION: TOP TIER ]</div>
-          <h3 style="font-size: 2rem; margin-bottom: 1.5rem; letter-spacing: 1px;">Lumi Rides Enterprise FinOps & MLOps</h3>
-          <p style="color: #aaa; line-height: 1.8; margin-bottom: 2rem;">
-            Spearheaded AWS migration and hyper-scaling for a global autonomous logistics fleet. 
-            Engineered automated machine learning deployment pipelines (MLOps) ensuring rapid algorithmic iterations. 
-            Implemented rigorous FinOps protocols resulting in a documented 30% reduction in monthly cloud expenditure while increasing system throughput.
-          </p>
-          <div class="tech-mono" style="color: var(--cyber-cyan); font-size: 0.8rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
-            AWS // EKS // SAGEMAKER // TERRAFORM // COST-OPTIMIZATION
-          </div>
+          <h3 style="font-size: 2rem; margin-bottom: 1.5rem; letter-spacing: 1px;">Lumi Rides FinOps & MLOps</h3>
+          <p style="color: #aaa; line-height: 1.8; margin-bottom: 2rem;">Spearheaded AWS migration and hyper-scaling for a global autonomous logistics fleet. Engineered automated machine learning deployment pipelines (MLOps) ensuring rapid algorithmic iterations. Implemented rigorous FinOps protocols resulting in a documented 30% reduction in monthly cloud expenditure while increasing system throughput.</p>
+          <div class="tech-mono" style="color: var(--cyber-cyan); font-size: 0.8rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">AWS // EKS // SAGEMAKER // TERRAFORM</div>
         </div>
-
-        <!-- Project 2 -->
         <div class="cyber-card gsap-card">
           <div class="tech-mono" style="color: var(--cyber-gold); font-size: 0.8rem; margin-bottom: 1rem;">[ CLASSIFICATION: HIGH TRAFFIC ]</div>
-          <h3 style="font-size: 2rem; margin-bottom: 1.5rem; letter-spacing: 1px;">Icc Migration & AbroadUp.com Gateway</h3>
-          <p style="color: #aaa; line-height: 1.8; margin-bottom: 2rem;">
-            Architected and deployed a massive MERN-stack ecosystem handling complex immigration workflows.
-            Designed the abroadup.com nexus, scaling dynamically to support 50,000+ monthly active users.
-            Integrated bulletproof microservices for document parsing, user authentication, and real-time CRM data synchronization.
-          </p>
-          <div class="tech-mono" style="color: var(--cyber-cyan); font-size: 0.8rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
-            MERN // NODE.JS // DOCKER // MICROSERVICES // REDIS
-          </div>
+          <h3 style="font-size: 2rem; margin-bottom: 1.5rem; letter-spacing: 1px;">Icc Migration Gateway</h3>
+          <p style="color: #aaa; line-height: 1.8; margin-bottom: 2rem;">Architected and deployed a massive MERN-stack ecosystem handling complex immigration workflows. Designed the abroadup.com nexus, scaling dynamically to support 50,000+ monthly active users. Integrated bulletproof microservices for document parsing and real-time CRM.</p>
+          <div class="tech-mono" style="color: var(--cyber-cyan); font-size: 0.8rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">MERN // NODE.JS // DOCKER // MICROSERVICES</div>
         </div>
-
-        <!-- Project 3 -->
         <div class="cyber-card gsap-card">
           <div class="tech-mono" style="color: var(--cyber-gold); font-size: 0.8rem; margin-bottom: 1rem;">[ CLASSIFICATION: MISSION CRITICAL ]</div>
           <h3 style="font-size: 2rem; margin-bottom: 1.5rem; letter-spacing: 1px;">Portpro Asia Automation Matrix</h3>
-          <p style="color: #aaa; line-height: 1.8; margin-bottom: 2rem;">
-            Revolutionized legacy supply chain pipelines. Authored comprehensive Infrastructure as Code (IaC) using Terraform and Ansible.
-            Executed zero-downtime database migrations (AWS DMS) and slashed CI/CD pipeline latency by 45%, enabling continuous daily deployments without disruption.
-          </p>
-          <div class="tech-mono" style="color: var(--cyber-cyan); font-size: 0.8rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
-            ANSIBLE // TERRAFORM // JENKINS // GITHUB ACTIONS // AWS DMS
-          </div>
+          <p style="color: #aaa; line-height: 1.8; margin-bottom: 2rem;">Revolutionized legacy supply chain pipelines. Authored comprehensive Infrastructure as Code (IaC) using Terraform and Ansible. Executed zero-downtime database migrations (AWS DMS) and slashed CI/CD pipeline latency by 45%, enabling continuous daily deployments.</p>
+          <div class="tech-mono" style="color: var(--cyber-cyan); font-size: 0.8rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">ANSIBLE // TERRAFORM // GITHUB ACTIONS // DMS</div>
         </div>
       </div>
     </div>
@@ -254,13 +174,11 @@
     <div style="max-width: 1000px; margin: 0 auto; padding: 0 2rem;">
       <p class="tech-mono" style="color: var(--cyber-cyan); letter-spacing: 0.3em; margin-bottom: 1rem;">// SYSTEM_LOGS :: OPERATIONAL_HISTORY</p>
       <h2 style="font-size: 3rem; margin-bottom: 5rem; letter-spacing: 0.1em;">Career_Trajectory</h2>
-      
       <div style="padding-left: 2rem;">
-        
         <div class="log-entry gsap-log">
           <div class="log-meta">TIMESTAMP: 2026_PRESENT // CLEARANCE: LEAD</div>
           <h3 style="font-size: 2.2rem; margin-bottom: 0.5rem;">DevOps Engineer</h3>
-          <h4 style="color: var(--cyber-gold); font-family: 'Syncopate'; margin-bottom: 1.5rem;">LUMI RIDES</h4>
+          <h4 style="color: var(--cyber-gold); margin-bottom: 1.5rem;">LUMI RIDES</h4>
           <p style="color: #bbb; line-height: 1.8; font-size: 1.1rem;" class="tech-mono">
             > Overseeing entire cloud posture for autonomous vehicle fleets.<br>
             > Enforcing AWS security standards, VPC peering, and KMS encryption architectures.<br>
@@ -268,11 +186,10 @@
             > Achieving 99.99% uptime SLA across critical backend infrastructure.
           </p>
         </div>
-
         <div class="log-entry gsap-log">
           <div class="log-meta">TIMESTAMP: 2025_2026 // CLEARANCE: ARCHITECT</div>
           <h3 style="font-size: 2.2rem; margin-bottom: 0.5rem;">IT Officer / Full Stack Developer</h3>
-          <h4 style="color: var(--cyber-gold); font-family: 'Syncopate'; margin-bottom: 1.5rem;">ICC MIGRATION</h4>
+          <h4 style="color: var(--cyber-gold); margin-bottom: 1.5rem;">ICC MIGRATION</h4>
           <p style="color: #bbb; line-height: 1.8; font-size: 1.1rem;" class="tech-mono">
             > Lead technical architect for corporate CRM systems.<br>
             > End-to-end development of the robust MERN stack backend.<br>
@@ -280,11 +197,10 @@
             > Implemented secure OAuth2 and JWT-based authentication layers.
           </p>
         </div>
-
         <div class="log-entry gsap-log">
           <div class="log-meta">TIMESTAMP: 2024_2024 // CLEARANCE: SENIOR</div>
           <h3 style="font-size: 2.2rem; margin-bottom: 0.5rem;">Senior DevOps</h3>
-          <h4 style="color: var(--cyber-gold); font-family: 'Syncopate'; margin-bottom: 1.5rem;">PORTPRO ASIA</h4>
+          <h4 style="color: var(--cyber-gold); margin-bottom: 1.5rem;">PORTPRO ASIA</h4>
           <p style="color: #bbb; line-height: 1.8; font-size: 1.1rem;" class="tech-mono">
             > Championed the shift from monolithic to containerized architecture (Docker).<br>
             > Automated environment provisioning reducing setup time from days to minutes.<br>
@@ -292,7 +208,6 @@
             > Handled incident response and root-cause analysis for production outages.
           </p>
         </div>
-
       </div>
     </div>
   </section>
@@ -302,11 +217,9 @@
     <div class="container-full">
       <p class="tech-mono" style="color: var(--cyber-pink); letter-spacing: 0.3em; margin-bottom: 1rem; text-align: center;">// NEURAL_NETWORK :: CAPABILITIES</p>
       <h2 style="font-size: 3rem; margin-bottom: 5rem; text-align: center;">Technical Matrix</h2>
-      
       <div class="grid" style="grid-template-columns: repeat(2, 1fr); max-width: 1000px; margin: 0 auto; gap: 4rem;">
         <div>
           <h3 class="tech-mono" style="color: var(--cyber-cyan); margin-bottom: 2rem;">[ CLOUD_&_INFRASTRUCTURE ]</h3>
-          
           <div style="margin-bottom: 1.5rem;" class="gsap-skill">
             <div style="display: flex; justify-content: space-between; font-family: 'Syncopate'; font-size: 0.9rem;"><span>AWS Architecting</span><span class="tech-mono">98%</span></div>
             <div class="skill-bar"><div class="skill-fill" data-width="98%"></div></div>
@@ -324,10 +237,8 @@
             <div class="skill-bar"><div class="skill-fill" data-width="88%"></div></div>
           </div>
         </div>
-
         <div>
            <h3 class="tech-mono" style="color: var(--cyber-cyan); margin-bottom: 2rem;">[ SOFTWARE_&_DATA ]</h3>
-           
            <div style="margin-bottom: 1.5rem;" class="gsap-skill">
             <div style="display: flex; justify-content: space-between; font-family: 'Syncopate'; font-size: 0.9rem;"><span>Node.js / React (MERN)</span><span class="tech-mono">96%</span></div>
             <div class="skill-bar"><div class="skill-fill" data-width="96%"></div></div>
@@ -349,25 +260,60 @@
     </div>
   </section>
 
-  <!-- ACADEMICS -->
-  <section id="education" class="section-padding" style="border-top: 1px solid rgba(212,175,55,0.2);">
+  <!-- ACADEMICS & CERTIFICATIONS -->
+  <section id="certifications" class="section-padding" style="border-top: 1px solid rgba(212,175,55,0.2);">
     <div class="container-full">
-      <p class="tech-mono" style="color: var(--cyber-gold); letter-spacing: 0.3em; margin-bottom: 1rem; text-align: center;">// KNOWLEDGE_BASE_ACQUISITION</p>
-      <h2 style="font-size: 3rem; margin-bottom: 5rem; text-align: center;">Academic Archives</h2>
+      <p class="tech-mono" style="color: var(--cyber-gold); letter-spacing: 0.3em; margin-bottom: 1rem; text-align: center;">// VALIDATION :: PROTOCOLS</p>
+      <h2 style="font-size: 3rem; margin-bottom: 5rem; text-align: center;">Credentials</h2>
       
-      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
+        <!-- Master's -->
         <div class="cyber-card gsap-card" style="text-align: center;">
-          <div class="log-meta" style="color: var(--cyber-pink); margin-bottom: 2rem;">STATUS: COMPILING (2025 - PRESENT)</div>
-          <h3 style="font-size: 2.5rem; margin-bottom: 1rem; text-transform: none;">Master of AI</h3>
-          <p style="color: var(--cyber-gold); font-size: 1.2rem; font-family: 'Syncopate';">Deakin University, Australia</p>
-          <p class="tech-mono" style="color: #888; margin-top: 1.5rem; font-size: 0.9rem;">Specializing in advanced Machine Learning paradigms, big data architectures, and deploying AI models into scalable cloud environments.</p>
+          <div class="log-meta" style="color: var(--cyber-pink); margin-bottom: 2rem;">STATUS: IN_PROGRESS (2025 - PRESENT)</div>
+          <h3 style="font-size: 2rem; margin-bottom: 1rem; text-transform: none;">Master of AI</h3>
+          <p style="color: var(--cyber-gold); font-size: 1.1rem; font-family: 'Syncopate';">Deakin University, Australia</p>
+          <p class="tech-mono" style="color: #888; margin-top: 1.5rem; font-size: 0.9rem;">Machine Learning paradigms, big data architectures, and deploying massive AI models to cloud networks.</p>
         </div>
-        
+        <!-- Bachelor's -->
         <div class="cyber-card gsap-card" style="text-align: center;">
-          <div class="log-meta" style="color: var(--cyber-cyan); margin-bottom: 2rem;">STATUS: EXECUTED (2018 - 2023)</div>
-          <h3 style="font-size: 2.5rem; margin-bottom: 1rem; text-transform: none;">Bachelor of BCIS</h3>
-          <p style="color: var(--cyber-gold); font-size: 1.2rem; font-family: 'Syncopate';">Pokhara University (Apex College)</p>
-          <p class="tech-mono" style="color: #888; margin-top: 1.5rem; font-size: 0.9rem;">Foundation in Computer Information Systems. Deep focus on software engineering, database management, and network infrastructure.</p>
+          <div class="log-meta" style="color: var(--cyber-cyan); margin-bottom: 2rem;">STATUS: COMPLETED (2018 - 2023)</div>
+          <h3 style="font-size: 2rem; margin-bottom: 1rem; text-transform: none;">Bachelor of BCIS</h3>
+          <p style="color: var(--cyber-gold); font-size: 1.1rem; font-family: 'Syncopate';">Pokhara University (Apex College)</p>
+          <p class="tech-mono" style="color: #888; margin-top: 1.5rem; font-size: 0.9rem;">Deep focus on software engineering, database management, and network infrastructure fundamentals.</p>
+        </div>
+        <!-- Certifications -->
+        <div class="cyber-card gsap-card" style="text-align: center;">
+          <div class="log-meta" style="color: var(--cyber-gold); margin-bottom: 2rem;">GLOBAL_CERTIFICATION_ACHIEVED</div>
+          <i class="fab fa-aws" style="font-size: 4rem; color: #FF9900; margin-bottom: 1rem;"></i>
+          <h3 style="font-size: 1.8rem; margin-bottom: 1rem; text-transform: none;">AWS Certified Developer Associate</h3>
+          <p class="tech-mono" style="color: #888; margin-top: 1.5rem; font-size: 0.9rem;">
+            Demonstrated proficiency in developing, deploying, and maintaining applications on the Amazon Web Services platform. Committed to continuous growth, DevOps, MERN Stack, and AI/ML tech.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / ENCRYPTED COMM -->
+  <section id="contact" class="section-padding" style="background: rgba(0, 0, 0, 0.9); border-top: 1px solid var(--cyber-cyan);">
+    <div class="container-full">
+      <p class="tech-mono" style="color: var(--cyber-cyan); letter-spacing: 0.3em; margin-bottom: 1rem; text-align: center;">// UPLINK :: ESTABLISH_COMMUNICATION</p>
+      <h2 style="font-size: 3rem; margin-bottom: 3rem; text-align: center;">Encrypted Terminal</h2>
+      <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <p class="tech-mono" style="color: #bbb; line-height: 1.8; margin-bottom: 4rem;">
+          The system stands ready. I am actively seeking architectural challenges and high-tier engineering problems. Initiate a handshake below.
+        </p>
+        
+        <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+          <a href="mailto:Puri.binaya@gmail.com" class="contact-link gsap-ext">
+            <i class="fas fa-envelope"></i> Puri.binaya@gmail.com
+          </a>
+          <a href="tel:+9779863452085" class="contact-link gsap-ext" style="border-color: var(--cyber-pink); color: var(--cyber-pink);">
+            <i class="fas fa-phone-alt"></i> +977 9863452085
+          </a>
+          <a href="#" class="contact-link gsap-ext" style="border-color: var(--cyber-gold); color: var(--cyber-gold);">
+            <i class="fab fa-linkedin-in"></i> LinkedIn Auth
+          </a>
         </div>
       </div>
     </div>
@@ -375,7 +321,7 @@
 
   <!-- Audio Control -->
   <div id="audio-ui" class="tech-mono" style="position: fixed; bottom: 2rem; right: 2rem; z-index: 10001; display:flex; gap:10px; align-items:center;">
-    <div class="audio-waves" style="display:flex; gap:3px; height:15px; align-items:flex-end;">
+    <div class="audio-waves" style="display:flex; gap:3px; height:20px; align-items:flex-end;">
        <div style="width:3px; height:100%; background:var(--cyber-cyan); animation: audioPulse 0.5s infinite alternate;"></div>
        <div style="width:3px; height:60%; background:var(--cyber-cyan); animation: audioPulse 0.7s infinite alternate;"></div>
        <div style="width:3px; height:80%; background:var(--cyber-cyan); animation: audioPulse 0.4s infinite alternate;"></div>
@@ -407,6 +353,8 @@
       "Injecting AI/MLOps pipelines...",
       "Decrypting user profile: BINAYA PURI",
       "Compiling 5+ years of operational data...",
+      "Retrieving Certification: AWS Developer Associate...",
+      "Fetching Contact Nodes: +977 9863452085",
       "SYSTEM READY. AWAITING MANUAL OVERRIDE."
     ];
     let logIndex = 0;
@@ -415,14 +363,34 @@
       if(logIndex < logs.length) {
         terminalOutput.innerHTML += `> ${logs[logIndex]}<br>`;
         logIndex++;
-        setTimeout(typeConsole, Math.random() * 300 + 100);
+        setTimeout(typeConsole, Math.random() * 200 + 50);
       } else {
         gsap.to("#init-btn", {opacity: 1, y: 0, duration: 1, ease: "power3.out"});
       }
     }
     setTimeout(typeConsole, 500);
 
-    // 2. CLEARER, GLOWING 3D CYBER-CITY
+    // Dynamic Typewriter Roles
+    const roles = ["DevOps Engineer.", "Cloud Architect.", "AI/ML Architect.", "Software Engineer."];
+    let roleIndex = 0; let charIndex = 0; let isDeleting = false;
+    const typewriterElem = document.getElementById("typewriter");
+
+    function typeRoles() {
+      const currentRole = roles[roleIndex];
+      if (isDeleting) { charIndex--; } else { charIndex++; }
+      
+      typewriterElem.innerHTML = currentRole.substring(0, charIndex);
+      
+      let typeSpeed = isDeleting ? 50 : 100;
+      if (!isDeleting && charIndex === currentRole.length) {
+        typeSpeed = 2000; isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false; roleIndex = (roleIndex + 1) % roles.length; typeSpeed = 500;
+      }
+      setTimeout(typeRoles, typeSpeed);
+    }
+
+    // 2. CLEARER, GLOWING 3D CYBER-CITY & HOLOGRAPHIC GRID
     let scene, camera, renderer, cityGroup, flyingCars = [];
     let mouseX = 0, mouseY = 0, targetX = 0, targetY = 0;
 
@@ -433,67 +401,68 @@
       renderer.setSize(window.innerWidth, window.innerHeight);
       document.getElementById('canvas-container').appendChild(renderer.domElement);
       
-      scene.fog = new THREE.FogExp2(0x050505, 0.0015);
-      
+      scene.fog = new THREE.FogExp2(0x050505, 0.0012);
       cityGroup = new THREE.Group();
       scene.add(cityGroup);
 
       // Cyberpunk Solid Buildings with Glowing Edges
       const boxGeo = new THREE.BoxGeometry(1, 1, 1);
-      
-      // We create a solid dark core and a glowing wireframe edge
       for(let i=0; i<400; i++) {
-        const w = Math.random() * 8 + 4;
-        const h = Math.random() * 150 + 20;
-        const d = Math.random() * 8 + 4;
-
+        const w = Math.random() * 8 + 4; const h = Math.random() * 150 + 20; const d = Math.random() * 8 + 4;
+        
         // Solid Dark Base
-        const solidMat = new THREE.MeshBasicMaterial({ color: 0x050505 });
+        const solidMat = new THREE.MeshBasicMaterial({ color: 0x020202 });
         const building = new THREE.Mesh(boxGeo, solidMat);
         building.scale.set(w, h, d);
         building.position.set((Math.random() - 0.5) * 800, h/2 - 50, (Math.random() - 0.5) * 800);
         
         // Glowing Neon Edges
         const edges = new THREE.EdgesGeometry(boxGeo);
-        // Mix of gold and cyan buildings
-        const edgeColor = Math.random() > 0.8 ? 0x00FFFF : 0xD4AF37;
-        const lineMat = new THREE.LineBasicMaterial({ color: edgeColor, linewidth: 2, transparent: true, opacity: 0.4 });
+        // Mix of gold, cyan, and deep pink
+        const rand = Math.random();
+        const edgeColor = rand > 0.8 ? 0x00FFFF : (rand > 0.4 ? 0xD4AF37 : 0xFF00FF);
+        const lineMat = new THREE.LineBasicMaterial({ color: edgeColor, linewidth: 2, transparent: true, opacity: 0.5 });
         const lineEdge = new THREE.LineSegments(edges, lineMat);
         
         building.add(lineEdge);
         cityGroup.add(building);
       }
 
-      // Flying neon cars for extreme futuristic hype
-      for(let i=0; i<50; i++) {
-        const carGeo = new THREE.BoxGeometry(2, 0.5, 0.5);
-        const carMat = new THREE.MeshBasicMaterial({ color: 0xFF00FF });
+      // Digital Grid Floor
+      const gridHelper = new THREE.GridHelper( 2000, 100, 0x00FFFF, 0x00FFFF );
+      gridHelper.position.y = -50;
+      gridHelper.material.opacity = 0.1;
+      gridHelper.material.transparent = true;
+      scene.add( gridHelper );
+
+      // Flying neon cars
+      for(let i=0; i<60; i++) {
+        const carGeo = new THREE.BoxGeometry(3, 0.5, 0.5);
+        const carMat = new THREE.MeshBasicMaterial({ color: Math.random() > 0.5 ? 0x00FFFF : 0xFF00FF });
         const car = new THREE.Mesh(carGeo, carMat);
-        car.position.set((Math.random()-0.5)*800, Math.random()*100 + 20, (Math.random()-0.5)*800);
-        car.userData.speed = Math.random() * 5 + 2;
+        car.position.set((Math.random()-0.5)*800, Math.random()*120 + 10, (Math.random()-0.5)*800);
+        car.userData.speed = Math.random() * 6 + 3;
         car.userData.axis = Math.random() > 0.5 ? 'x' : 'z';
         flyingCars.push(car);
         scene.add(car);
       }
 
-      camera.position.set(0, 1000, 2000); // Start way high up
+      camera.position.set(0, 1000, 2000); 
       camera.lookAt(0,0,0);
     }
 
     function animate3D() {
       requestAnimationFrame(animate3D);
-      targetX += (mouseX - targetX) * 0.05;
-      targetY += (mouseY - targetY) * 0.05;
+      targetX += (mouseX - targetX) * 0.05; targetY += (mouseY - targetY) * 0.05;
       
-      // Slight smooth parallax based on scroll & mouse
+      // Super dramatic camera movement based on page scroll
       camera.position.x = targetX * 1.5;
-      camera.position.y = 80 - targetY + window.scrollY * 0.05; // Drop camera to ground level
+      camera.position.y = 80 - targetY + window.scrollY * 0.05; 
       camera.lookAt(0, window.scrollY * 0.05, 0);
 
-      // Rotate city slowly
-      cityGroup.rotation.y += 0.0005;
+      // City Matrix Rotation
+      cityGroup.rotation.y += 0.0003;
 
-      // Animate flying cars
       flyingCars.forEach(car => {
         car.position[car.userData.axis] += car.userData.speed;
         if(car.position[car.userData.axis] > 400) car.position[car.userData.axis] = -400;
@@ -503,18 +472,15 @@
     }
 
     window.addEventListener('mousemove', (e) => {
-      mouseX = (e.clientX - window.innerWidth / 2);
-      mouseY = (e.clientY - window.innerHeight / 2);
+      mouseX = (e.clientX - window.innerWidth / 2); mouseY = (e.clientY - window.innerHeight / 2);
     });
 
     window.addEventListener('resize', () => {
-      camera.aspect = window.innerWidth / window.innerHeight;
-      camera.updateProjectionMatrix();
+      camera.aspect = window.innerWidth / window.innerHeight; camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
     });
 
-    init3D();
-    animate3D();
+    init3D(); animate3D();
 
     // 3. YOUTUBE SYSTEM AUDIO
     let player;
@@ -526,55 +492,60 @@
       });
     }
 
-    // 4. ACTION INTERFACE: LAUNCH PORTFOLIO
+    // 4. BIG GOOSEBUMPS REVEAL
     document.getElementById('init-btn').addEventListener('click', () => {
-      // Audio Unmute
       if(player && player.unMute) { player.unMute(); player.playVideo(); }
 
-      // Visually spectacular entry dump
-      gsap.to("#boot-sequence", { opacity: 0, scale: 2, filter: "blur(20px)", duration: 2, ease: "power4.inOut", onComplete: () => {
+      // Boot sequence explodes outward
+      gsap.to("#boot-sequence", { opacity: 0, scale: 3, filter: "blur(40px)", duration: 2.5, ease: "power4.inOut", onComplete: () => {
         document.getElementById('boot-sequence').style.display = 'none';
       }});
 
-      // Camera swoops down from sky into the city
-      gsap.to(camera.position, { z: 400, y: 80, duration: 4, ease: "power3.inOut" });
+      // Camera violently rushes into the city from sky
+      gsap.to(camera.position, { z: 400, y: 80, duration: 4.5, ease: "expo.inOut" });
 
-      // Fade in UI with Stagger
-      gsap.to("#navbar", { opacity: 1, y: 0, duration: 1.5, delay: 1, ease: "bounce.out" });
-      gsap.from(".gsap-hero", { opacity: 0, y: 100, rotationX: 45, duration: 1.5, delay: 1.5, ease: "power4.out"});
+      // Holographic Rings scale out
+      gsap.from(".holo-ring", { scale: 0, opacity: 0, duration: 3, stagger: 0.5, ease: "elastic.out(1, 0.3)", delay: 1 });
+
+      gsap.to("#navbar", { opacity: 1, y: 0, duration: 1.5, delay: 1.5, ease: "back.out(2)" });
+      gsap.from(".gsap-hero", { opacity: 0, y: 150, z: -100, rotationX: 45, duration: 2, delay: 2, ease: "power4.out"});
+      
+      setTimeout(typeRoles, 2500); // Start typewriter only after dive is complete
     });
 
-    // 5. GOOSEBUMPS SCROLL ANIMATIONS (GSAP ScrollTrigger)
-    
-    // Cards fly in like fragmented data
+    // 5. GSAP HYPER-ANIMATIONS ON SCROLL
     gsap.utils.toArray('.gsap-card').forEach((card, i) => {
       gsap.from(card, {
-        scrollTrigger: { trigger: card, start: "top 85%" },
-        opacity: 0, y: 100, rotationY: 30, z: -200,
-        duration: 1.5, ease: "back.out(1.7)"
+        scrollTrigger: { trigger: card, start: "top 80%" },
+        opacity: 0, y: 100, rotationY: 45, transformOrigin: "left center",
+        duration: 1.5, ease: "power4.out"
       });
     });
 
-    // Logs slam in from the side
     gsap.utils.toArray('.gsap-log').forEach((log, i) => {
       gsap.from(log, {
         scrollTrigger: { trigger: log, start: "top 85%" },
-        opacity: 0, x: -150, 
-        duration: 1, ease: "power4.out"
+        opacity: 0, x: -200, scale: 0.8,
+        duration: 1.2, ease: "elastic.out(1, 0.8)"
       });
     });
 
-    // Skill bars shoot up
     gsap.utils.toArray('.gsap-skill').forEach((skill) => {
       let fill = skill.querySelector('.skill-fill');
       let targetWidth = fill.getAttribute('data-width');
       gsap.to(fill, {
         scrollTrigger: { trigger: skill, start: "top 90%" },
-        width: targetWidth, duration: 2, ease: "expo.out"
+        width: targetWidth, duration: 2, ease: "bounce.out"
       });
     });
 
-    // Audio Mute Toggle
+    gsap.utils.toArray('.gsap-ext').forEach((link, i) => {
+      gsap.from(link, {
+        scrollTrigger: { trigger: link, start: "top 95%" },
+        opacity: 0, y: 50, duration: 1, delay: i * 0.2, ease: "back.out(1.5)"
+      });
+    });
+
     document.getElementById('audio-toggle').addEventListener('click', function() {
       if(!player) return;
       if(player.isMuted()) {
