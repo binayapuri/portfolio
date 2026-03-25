@@ -5,273 +5,233 @@
   <title>Binaya Puri | Senior DevOps & Cloud Infrastructure Architect</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta name="description" content="Binaya Puri - Expert DevOps & Cloud Engineer. Specialized in AWS, Azure, MLOps, and MERN stack with 5+ years of experience.">
-  <meta name="author" content="Binaya Puri">
-
-  <!-- Favicons -->
+  
   <link href="img/favicon.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  
-  <!-- Main Stylesheet -->
   <link href="css/modern-premium.css" rel="stylesheet">
 
+  <style>
+    /* Fixed & Perfect Entry Modal */
+    #enter-modal {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: #000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 10000; /* Highest priority */
+      transition: opacity 1.5s ease-in-out, visibility 1.5s;
+    }
+
+    .hero-gradient-text {
+      background: linear-gradient(135deg, #fff 0%, #D4AF37 50%, #FF00FF 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Cinematic Scanlines */
+    .scanline {
+      width: 100%; height: 100px; z-index: 9999;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.02) 50%, rgba(0, 0, 0, 0) 100%);
+      opacity: 0.1; position: fixed; bottom: 100%;
+      pointer-events: none; animation: scanline 8s linear infinite;
+    }
+    @keyframes scanline { 0% { bottom: 100%; } 100% { bottom: -100px; } }
+
+    #youtube-player { position: absolute; top: -9999px; visibility: hidden; }
+  </style>
 </head>
 
 <body id="page-top">
+  <div class="scanline"></div>
+
+  <!-- Entry Portal -->
+  <div id="enter-modal">
+    <div style="text-align: center; max-width: 400px; padding: 2rem;">
+      <h2 style="font-family: var(--font-heading); font-size: 2.5rem; margin-bottom: 1.5rem; letter-spacing: -0.05em; color: #fff;">ESTABLISHING <br>CONNECTION</h2>
+      <p style="font-family: var(--font-mono); font-size: 0.7rem; color: #666; margin-bottom: 3rem; text-transform: uppercase; letter-spacing: 0.2em;">AURA INTERFACE V3.0 // BINAYA PURI</p>
+      <button id="enter-btn" style="padding: 1.25rem 3rem; background: transparent; border: 1px solid var(--accent-gold); color: var(--accent-gold); font-family: var(--font-mono); letter-spacing: 0.5em; cursor: pointer; transition: 0.4s;">ENTER SYSTEM</button>
+    </div>
+  </div>
+
+  <div id="youtube-player"></div>
+  <div id="custom-cursor"></div>
+  <div id="cursor-follower"></div>
+  <div id="canvas-container" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none;"></div>
 
   <!-- Navigation -->
-  <nav id="navbar">
+  <nav id="navbar" style="opacity: 0; transform: translateY(-50px);">
     <div class="nav-container">
       <a href="#page-top" class="logo">BINAYA.PURI</a>
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#projects">Work</a></li>
-        <li><a href="#experience">Journey</a></li>
-        <li><a href="#skills">Stack</a></li>
-        <li><a href="#education">Academic</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home">// HOME</a></li>
+        <li><a href="#projects">// WORK</a></li>
+        <li><a href="#experience">// JOURNEY</a></li>
+        <li><a href="#skills">// STACK</a></li>
+        <li><a href="#education">// ACADEMIC</a></li>
+        <li><a href="#contact">// CONTACT</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- Hero Section -->
   <section id="home" class="hero">
-    <div data-aos="fade-up" data-aos-duration="1200">
-      <p class="hero-pretitle">Innovation & Reliability</p>
-      <h1 class="hero-title">Senior DevOps <br>& Cloud Architect.</h1>
+    <div data-aos="zoom-out" data-aos-duration="2000">
+      <p class="hero-pretitle" style="color: var(--accent-gold); letter-spacing: 0.3em;">AURA INFRASTRUCTURE MANAGEMENT // 5+ YEARS EXP</p>
+      <h1 class="hero-title"><span class="hero-gradient-text">DevOps & Cloud</span> <br>Architect.</h1>
       <p class="hero-subtitle">
-        Architecting secure, high-availability cloud infrastructures and bridging the gap between DevOps, AI, and enterprise-grade Full-Stack Engineering.
+        Engineering high-availability cloud ecosystems, optimizing CI/CD workflows, and scaling AI-driven architectural paradigms.
       </p>
-      <div style="margin-top: 5rem;">
-        <a href="#projects" class="btn-primary">View Projects</a>
-        <a href="#contact" class="btn-outline">Get In Touch</a>
+      <div style="display: flex; gap: 2rem; justify-content: center; margin-top: 4rem;">
+        <a href="#projects" class="btn-primary">Initialize Work</a>
+        <a href="#contact" class="btn-outline">Secure Contact</a>
       </div>
     </div>
   </section>
 
-  <!-- Case Studies / Projects -->
+  <!-- Case Studies -->
   <section id="projects" class="section-padding">
     <div class="container-full">
       <p class="section-label">Selected Projects</p>
       <h2 class="section-title">Technological Execution</h2>
-      
       <div class="grid">
-        <!-- Project 1 -->
         <div class="card" data-aos="fade-up">
-          <h3 style="margin-bottom: 2rem; font-size: 1.75rem;">AWS FinOps & MLOps Pipeline</h3>
-          <p style="color: var(--text-dim); margin-bottom: 2.5rem;">
-            Orchestrating high-scale cloud environments with a focus on AWS cost-optimization (FinOps) and automated Machine Learning deployment pipelines (MLOps). 
-            Reduced operational costs by 30% through strategic architectural shifts.
-          </p>
-          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-             <span class="skill-tag">AWS Cloud</span>
-             <span class="skill-tag">FinOps</span>
-             <span class="skill-tag">MLOps</span>
-          </div>
+          <h3 style="margin-bottom: 2rem; font-size: 1.75rem;">Lumi Rides FinOps</h3>
+          <p style="color: var(--text-dim); margin-bottom: 2.5rem;">AWS Cloud Architecture focusing on FinOps and MLOps. Automated model deployment pipelines.</p>
+          <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-gold);">[ AWS / MLOPS / IAC ]</div>
         </div>
-
-        <!-- Project 2 -->
         <div class="card" data-aos="fade-up" data-aos-delay="100">
-          <h3 style="margin-bottom: 2rem; font-size: 1.75rem;">Immigration CRM & Portal</h3>
-          <p style="color: var(--text-dim); margin-bottom: 2.5rem;">
-            Architected the abroadup.com ecosystem—a high-traffic news and job recruitment portal for international seekers. 
-            Integrated a full-scale CRM to automate complex immigration workflows and document processing.
-          </p>
-          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-             <span class="skill-tag">MERN Stack</span>
-             <span class="skill-tag" style="background: var(--bg-primary);">CRM Hub</span>
-             <span class="skill-tag">Security</span>
-          </div>
+          <h3 style="margin-bottom: 2rem; font-size: 1.75rem;">Immigration CRM</h3>
+          <p style="color: var(--text-dim); margin-bottom: 2.5rem;">Architected the abroadup.com news and job recruitment portal for international seekers.</p>
+          <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-gold);">[ MERN / NODE.JS / SECURITY ]</div>
         </div>
-
-        <!-- Project 3 -->
         <div class="card" data-aos="fade-up" data-aos-delay="200">
-          <h3 style="margin-bottom: 2rem; font-size: 1.75rem;">Database Migration & IaC</h3>
-          <p style="color: var(--text-dim); margin-bottom: 2.5rem;">
-            Executing zero-downtime database migrations (DMS) between RDS and on-premise targets. 
-            Automated entire infrastructure provisioning using Terraform and Ansible for rapid environment replication.
-          </p>
-          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-             <span class="skill-tag">Terraform</span>
-             <span class="skill-tag">Ansible</span>
-             <span class="skill-tag">Migration</span>
-          </div>
+          <h3 style="margin-bottom: 2rem; font-size: 1.75rem;">Infra Automation</h3>
+          <p style="color: var(--text-dim); margin-bottom: 2.5rem;">Automated database migrations and infrastructure provisioning with Terraform and Ansible.</p>
+          <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-gold);">[ TERRAFORM / ANSIBLE / DMS ]</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Professional Journey -->
+  <!-- Timeline -->
   <section id="experience" class="section-padding" style="background: var(--bg-secondary);">
     <div class="container-full">
-      <p class="section-label">Professional Evolution</p>
-      <h2 class="section-title">Industry Impact</h2>
-      
+      <p class="section-label">Journey Log</p>
+      <h2 class="section-title">Professional Impact</h2>
       <div class="experience-list">
-        
-        <!-- Lumi Rides -->
         <div class="exp-item" data-aos="fade-up">
-          <div class="exp-date">Jan 2026 - Present</div>
-          <div class="exp-content">
-            <h3>DevOps Cloud Engineer</h3>
-            <div class="exp-company">Lumi Rides</div>
-            <p style="color: var(--text-dim); font-size: 1.1rem; max-width: 900px;">
-              Leading AWS Cloud Architecture and Full-Stack scaling. Implementing FinOps for cost control and MLOps for automated feature delivery.
-            </p>
-          </div>
+          <div class="exp-date">2026_PRESENT</div>
+          <div class="exp-content"><h3>DevOps Engineer</h3><div class="exp-company">Lumi Rides</div></div>
         </div>
-
-        <!-- Icc Migration -->
         <div class="exp-item" data-aos="fade-up">
-          <div class="exp-date">Jun 2025 - Mar 2026</div>
-          <div class="exp-content">
-            <h3>Full Stack Software Engineer / IT Officer</h3>
-            <div class="exp-company">Icc Migration</div>
-            <p style="color: var(--text-dim); font-size: 1.1rem; max-width: 900px;">
-              Architected the core Immigration CRM and scaled abroadup.com news/recruitment engine. Specialized in workflow automation.
-            </p>
-          </div>
+          <div class="exp-date">2025_2026</div>
+          <div class="exp-content"><h3>IT Officer / Full Stack</h3><div class="exp-company">Icc Migration</div></div>
         </div>
-
-        <!-- Q bits -->
         <div class="exp-item" data-aos="fade-up">
-          <div class="exp-date">Nov 2025 - Present</div>
-          <div class="exp-content">
-            <h3>DevOps & Cloud Specialist</h3>
-            <div class="exp-company">Q bits (Consulting)</div>
-            <p style="color: var(--text-dim); font-size: 1.1rem; max-width: 900px;">
-              Providing expert cloud strategic consulting for hybrid environments, specializing in security hardening and IaC.
-            </p>
-          </div>
-        </div>
-
-        <!-- Portpro Asia -->
-        <div class="exp-item" data-aos="fade-up">
-          <div class="exp-date">Jun 2024 - Nov 2024</div>
-          <div class="exp-content">
-            <h3>Senior DevOps Engineer</h3>
-            <div class="exp-company">Portpro Asia</div>
-            <p style="color: var(--text-dim); font-size: 1.1rem; max-width: 900px;">
-              Managed core infrastructure automation. Spearheaded CI/CD modernization across global logistics operations.
-            </p>
-          </div>
-        </div>
-
-        <!-- Adex -->
-        <div class="exp-item" data-aos="fade-up">
-          <div class="exp-date">May 2023 - May 2024</div>
-          <div class="exp-content">
-            <h3>DevOps/Cloud Engineer (Jr & Intern)</h3>
-            <div class="exp-company">Adex International</div>
-            <p style="color: var(--text-dim); font-size: 1.1rem; max-width: 900px;">
-              Focused on infrastructure as code and containerizing legacy applications on AWS. 
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Stack -->
-  <section id="skills" class="section-padding">
-    <div class="container-full">
-      <p class="section-label">Core Capabilities</p>
-      <h2 class="section-title">Technical Expertise</h2>
-      
-      <div class="skills-container">
-        <div class="skill-tag">AWS Infrastructure</div>
-        <div class="skill-tag">Microsoft Azure</div>
-        <div class="skill-tag">Google Cloud (GCP)</div>
-        <div class="skill-tag">Terraform (IaC)</div>
-        <div class="skill-tag">Ansible Automation</div>
-        <div class="skill-tag">Kubernetes (K8s)</div>
-        <div class="skill-tag">Docker & Containers</div>
-        <div class="skill-tag">CI/CD (GitHub Actions / Jenkins)</div>
-        <div class="skill-tag">Linux Systems (Expert)</div>
-        <div class="skill-tag">Python & Bash Scripting</div>
-        <div class="skill-tag">React.js & MERN Stack</div>
-        <div class="skill-tag">Node.js Microservices</div>
-        <div class="skill-tag">MLOps & AI Models</div>
-        <div class="skill-tag">PostgreSQL & MongoDB</div>
-        <div class="skill-tag">Prometheus & Grafana</div>
-        <div class="skill-tag">Serverless Architectural Patterns</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Academic Base -->
-  <section id="education" class="section-padding" style="background: var(--bg-secondary);">
-    <div class="container-full">
-      <p class="section-label">Academic Background</p>
-      <h2 class="section-title">Formal Education</h2>
-      
-      <div class="grid">
-        <div class="card" data-aos="fade-up">
-          <p class="hero-pretitle">2025 - Present</p>
-          <h3 style="margin-bottom: 2rem;">Masters in Artificial Intelligence</h3>
-          <p style="color: var(--accent-gold); font-weight: 700; margin-bottom: 1rem;">Deakin University, Australia</p>
-          <p style="color: var(--text-dim);">Researching advanced ML models, Neural Networks, and Intelligent Cloud Infrastructures.</p>
-        </div>
-        <div class="card" data-aos="fade-up" data-aos-delay="100">
-          <p class="hero-pretitle">2018 - 2023</p>
-          <h3 style="margin-bottom: 2rem;">Bachelor of BCIS</h3>
-          <p style="color: var(--accent-gold); font-weight: 700; margin-bottom: 1rem;">Pokhara University (Apex College)</p>
-          <p style="color: var(--text-dim);">Focused on Information Systems, Software Architecture, and Enterprise Databases.</p>
-        </div>
-        <div class="card" data-aos="fade-up" data-aos-delay="200">
-          <p class="hero-pretitle">2016 - 2018</p>
-          <h3 style="margin-bottom: 2rem;">+2 Science</h3>
-          <p style="color: var(--accent-gold); font-weight: 700; margin-bottom: 1rem;">Kathmandu Bernhardt School</p>
-          <p style="color: var(--text-dim);">Solid foundation in Physics and Mathematics with full merit scholarship.</p>
+          <div class="exp-date">2024_2024</div>
+          <div class="exp-content"><h3>Senior DevOps</h3><div class="exp-company">Portpro Asia</div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section-padding">
-    <div class="container-full" style="text-align: center;">
-      <p class="section-label">Collaboration</p>
-      <h2 class="section-title">Get In Touch</h2>
-      <p style="font-size: 1.5rem; color: var(--text-dim); max-width: 700px; margin: 0 auto 5rem;">
-        Available for architectural consulting, enterprise DevOps leadership, and strategic engineering roles.
-      </p>
-      
-      <div style="display: flex; gap: 2rem; justify-content: center; margin-bottom: 6rem;">
-        <a href="mailto:Binaya.puri@apexcollege.edu.np" class="card" style="padding: 1.5rem; border-radius: 4px; color: #fff; font-size: 1.5rem;"><i class="fas fa-envelope"></i></a>
-        <a href="https://www.linkedin.com/in/binaya-puri-b2705923b/" target="_blank" class="card" style="padding: 1.5rem; border-radius: 4px; color: #fff; font-size: 1.5rem;"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://github.com/binayapuri" target="_blank" class="card" style="padding: 1.5rem; border-radius: 4px; color: #fff; font-size: 1.5rem;"><i class="fab fa-github"></i></a>
-        <a href="https://medium.com/@binaya.puri" target="_blank" class="card" style="padding: 1.5rem; border-radius: 4px; color: #fff; font-size: 1.5rem;"><i class="fab fa-medium-m"></i></a>
-      </div>
-      
-      <a href="mailto:Binaya.puri@apexcollege.edu.np" class="btn-primary" style="font-size: 1.25rem; padding: 1.5rem 5rem;">Request Consultation</a>
-    </div>
-  </section>
+  <!-- Audio Toggle -->
+  <button id="audio-toggle" style="position: fixed; bottom: 2rem; right: 2rem; z-index: 10001; background: rgba(0,0,0,0.5); border: 1px solid var(--accent-gold); color: #fff; padding: 0.75rem 1.5rem; font-family: var(--font-mono); font-size: 0.7rem;">AUDIO: ON</button>
 
-  <!-- Footer -->
-  <footer style="padding: 6rem 5%; text-align: center; border-top: 1px solid var(--border-color);">
-    <p style="color: var(--text-muted); font-weight: 700;">&copy; 2026 BINAYA PURI. ALL RIGHTS RESERVED.</p>
-  </footer>
-
-  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ once: true, duration: 1000 });
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
 
-    window.addEventListener('scroll', () => {
-      const nav = document.getElementById('navbar');
-      if (window.scrollY > 100) {
-        nav.style.backgroundColor = 'rgba(10, 10, 10, 0.95)';
-        nav.style.padding = '0.75rem 0';
-      } else {
-        nav.style.backgroundColor = 'rgba(10, 10, 10, 0.8)';
-        nav.style.padding = '1.25rem 0';
-      }
+  <script>
+    AOS.init({ once: true, duration: 1500 });
+
+    let player, scene, camera, renderer, cityGroup;
+    let buildings = [], pillars = [];
+    let mouseX = 0, mouseY = 0, targetX = 0, targetY = 0;
+
+    function init3D() {
+        scene = new THREE.Scene();
+        camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 1, 3000);
+        renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.getElementById('canvas-container').appendChild(renderer.domElement);
+        scene.fog = new THREE.FogExp2(0x000000, 0.002);
+        cityGroup = new THREE.Group();
+        scene.add(cityGroup);
+
+        for(let i = 0; i < 350; i++) {
+            const h = Math.random() * 50 + 5;
+            const w = Math.random() * 5 + 1;
+            const b = new THREE.Mesh(new THREE.BoxGeometry(w, h, w), new THREE.MeshBasicMaterial({ color: 0xD4AF37, wireframe: true, transparent: true, opacity: 0.04 }));
+            b.position.set((Math.random() - 0.5) * 350, h/2 - 40, (Math.random() - 0.5) * 350);
+            buildings.push(b);
+            cityGroup.add(b);
+        }
+        for(let i = 0; i < 15; i++) {
+            const p = new THREE.Mesh(new THREE.CylinderGeometry(0.1, 0.1, 800, 8), new THREE.MeshBasicMaterial({ color: 0xD4AF37, transparent: true, opacity: 0.1 }));
+            p.position.set((Math.random()-0.5)*300, 400, (Math.random()-0.5)*300);
+            pillars.push(p);
+            scene.add(p);
+        }
+        camera.position.z = 2000;
+        camera.position.y = 100;
+    }
+
+    function animate() {
+        requestAnimationFrame(animate);
+        targetX += (mouseX - targetX) * 0.04;
+        targetY += (mouseY - targetY) * 0.04;
+        camera.position.x = targetX;
+        camera.position.y = 100 - targetY;
+        camera.lookAt(0, 0, 0);
+        cityGroup.rotation.y += 0.0002;
+        renderer.render(scene, camera);
+    }
+
+    window.addEventListener('mousemove', (e) => {
+        mouseX = (e.clientX - window.innerWidth / 2) / 8;
+        mouseY = (e.clientY - window.innerHeight / 2) / 8;
     });
+
+    window.onYouTubeIframeAPIReady = function() {
+        player = new YT.Player('youtube-player', {
+            height: '0', width: '0', videoId: 'd_HlPboLRL8',
+            playerVars: { 'autoplay': 1, 'loop': 1, 'playlist': 'd_HlPboLRL8', 'mute': 1 },
+            events: { 'onReady': (e) => e.target.setVolume(100) }
+        });
+    }
+
+    document.getElementById('enter-btn').addEventListener('click', () => {
+        gsap.to("#enter-modal", { opacity: 0, scale: 1.5, duration: 2, ease: "power4.inOut", onComplete: () => {
+            document.getElementById('enter-modal').style.display = 'none';
+        }});
+        gsap.to(camera.position, { z: 120, y: 40, duration: 4, ease: "power4.inOut" });
+        if(player && player.unMute) { player.unMute(); player.playVideo(); }
+        gsap.to("#navbar", { opacity: 1, y: 0, duration: 2, delay: 1 });
+    });
+
+    // Cursor
+    const cursor = document.getElementById('custom-cursor');
+    const follower = document.getElementById('cursor-follower');
+    document.addEventListener('mousemove', (e) => {
+        gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: 0.1 });
+        gsap.to(follower, { x: e.clientX - 20, y: e.clientY - 20, duration: 0.3 });
+    });
+
+    window.addEventListener('resize', () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+
+    init3D();
+    animate();
   </script>
 </body>
 </html>
